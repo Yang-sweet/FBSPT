@@ -1,0 +1,10 @@
+@charset "UTF-8";
+#submission{margin:0 auto; margin-top: 50px; width: 80%; height:550px; border: 1px white;}
+#submission_list{height: 40px;}
+#test_id{text-align: center; width: 20%; height: 20px; color: gray; }
+#test_name{text-align: center; width: 40%; height: 20px; color: gray; }
+#sub_state{text-align: center; width: 10%; height: 20px; color: gray; }
+#sub_result{text-align: center; width: 10%; height: 20px; color: gray; }
+#sub_time{text-align: center; width: 20%; height: 20px; color: gray; }
+.sub_table{text-align: center; height:45px; color: white; background-color: #b85a34;}
+table{ width:60%;border-collapse:collapse;border-spacing:0;border-left:1px solid #888;border-top:1px solid #888;}

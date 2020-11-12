@@ -1,0 +1,7 @@
+#test{margin:0 auto; margin-top: 50px; width: 60%; height:500px;}
+	#test_list{height: 50px;}
+#test_name{text-align: center; width: 50%; height: 20px; color: #3d3b3b; font-weight: bold;}
+	#enter{text-align: center; width: 30%}
+	#click{text-align: center; margin-left: 20px; width: 60%; height: 30px; line-height: 30px; background-color: #706969; color: #FFFFFF;
+	border-radius: 5%;}
+	input[type=submit]{text-align: center; margin: 0 auto; margin-top: 7px; background-color: #706969; color: #FFFFFF; border: #706969; cursor: pointer;}

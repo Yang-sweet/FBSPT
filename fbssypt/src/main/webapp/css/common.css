@@ -1,0 +1,26 @@
+/* 设置页面基础样式 */
+*{margin: 0px; padding: 0px;}
+/* 设置header头部分大小 */
+#header{width: 100%; height: 100px;background: gainsboro; }
+	/* 设置系统logo */
+	#header_logo{float:right; margin-top: 30px; margin-left: 70px; margin-bottom: 30px;}
+	/* 设置用户信息 */
+	#header_user{position: absolute; margin-top: 40px; right: 92px;}
+/* 设置导航栏 */
+#nav{height: 50px; background-color: #706969;}
+	/* 在线测试 */
+	#nav_test{position: absolute; left: 150px; margin-top: 13px; color: white; font-size: 20px;}
+	/* 提交记录 */
+	#nav_sub{position: absolute; left: 350px; margin-top: 13px; color: white; font-size: 20px;}
+	/* 我的信息 */
+	#nav_info{position: absolute; left: 550px; margin-top: 13px; color: white; font-size: 20px;}
+	/* 常见问题 */
+	#nav_help{position: absolute; left: 750px; margin-top: 13px; color: white; font-size: 20px;}
+	/* 成绩统计，教师或管理员使用 */
+	#nav_statistics{position: absolute; left: 950px; margin-top: 13px; color: white; font-size: 20px;}
+	/* 平台监控，管理员使用 */
+	#nav_monitor{position: absolute; left: 1150px; margin-top: 13px; color: white; font-size: 20px;}
+
+/* 设置a链接字体 */
+a{text-decoration:none; color: white;}
+

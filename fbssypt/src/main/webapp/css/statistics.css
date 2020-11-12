@@ -1,0 +1,12 @@
+#my_statistics{margin:0 auto; margin-top: 50px; width: 80%; height:550px; }
+#statistics_title{margin-left: 50px; margin-top: 30px;}
+.data{margin-left: 50px;margin-top: 20px; color: #808080;}
+#line{margin-left: 50px;margin-top: 10px;}
+hr{height: 0; width: 80%;}
+.sta_table{text-align: center; height:45px; color: white; background-color: #B0252A;}
+table{border-collapse:collapse;border-spacing:0;border-left:1px solid #888;border-top:1px solid #888;}
+#user_id{text-align: center; width: 25%; height: 20px; color: black; }
+#user_name{text-align: center; width: 25%; height: 20px; color: black; }
+#user_finished{text-align: center; width: 25%; height: 20px; color: black; }
+#user_score{text-align: center; width: 25%; height: 20px; color: black; }
+#statistics_list{height: 30px;}

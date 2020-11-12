@@ -1,0 +1,7 @@
+@charset "UTF-8";
+#my_info{margin:0 auto; margin-top: 50px; width: 80%; height:550px; }
+	#info_title{margin-left: 50px; margin-top: 30px;}
+	#info_content{margin-left: 50px;margin-top: 50px;}
+	.info{margin-left: 50px;margin-top: 20px; color: #808080;}
+	#line{margin-left: 50px;margin-top: 20px;}
+	hr{height: 0; width: 80%;}

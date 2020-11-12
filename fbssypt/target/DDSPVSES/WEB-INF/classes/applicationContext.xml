@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd"
+       default-lazy-init="true">
+    <context:component-scan base-package="pers.chhuai.storm.beans"></context:component-scan>
+    <context:component-scan base-package="pers.chhuai.storm.dao"></context:component-scan>
+    <context:component-scan base-package="pers.chhuai.storm.service"></context:component-scan>
+    <context:component-scan base-package="pers.chhuai.storm.servlet"></context:component-scan>
+    <context:component-scan base-package="pers.chhuai.storm.utils"></context:component-scan>
+
+    <bean id="submissionService" class="pers.chhuai.storm.service.bean.impl.SubmissionServiceImpl"></bean>
+    <bean id="appService" class="pers.chhuai.storm.service.bean.impl.AppServiceImpl"></bean>
+    <!-- 导入资源文件
+        读取db.properties文件中的数据 -->
+    <context:property-placeholder location="classpath*:db.properties"/>
+
+    <!-- 公共部分   -->
+    <!--  配置QueryRunner   -->
+    <bean id="runner" class="org.apache.commons.dbutils.QueryRunner" scope="prototype">
+        <!--    注入数据源    -->
+<!--        <constructor-arg name="ds" ref="dataSource"></constructor-arg>-->
+    </bean>
+    <!--  配置数据源  -->
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+        <property name="url" value="${jdbc.url}" />
+        <property name="username" value="${jdbc.user}" />
+        <property name="password" value="${jdbc.password}" />
+        <property name="driverClassName" value="${jdbc.driverClass}"></property>
+    </bean>
+
+    <!--  配置文件上传器  -->
+    <bean id="uploader" class="pers.chhuai.storm.service.remote.impl.RemoteUploadImpl">
+        <constructor-arg name="ip" value="192.168.8.115"></constructor-arg>
+        <constructor-arg name="port" value="22"></constructor-arg>
+        <constructor-arg name="username" value="root"></constructor-arg>
+        <constructor-arg name="password" value="123456"></constructor-arg>
+    </bean>
+
+<!--     配置远程命令运行器-->
+    <bean id="remoteExecutor" class="pers.chhuai.storm.service.remote.impl.RemoteCommandExecImpl">
+        <constructor-arg name="ip" value="192.168.8.115"></constructor-arg>
+        <constructor-arg name="username" value="root"></constructor-arg>
+        <constructor-arg name="password" value="123456"></constructor-arg>
+        <constructor-arg name="tmpLocation" value="/export/servers/tmp/"></constructor-arg>
+    </bean>
+</beans>
